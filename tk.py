@@ -89,14 +89,14 @@ class Gun(Frame):
         self.greet_button = Button(self, text="Backlight ON", command=self.backlight_on).grid(row=19, column=0)
         self.greet_button = Button(self, text="Backlight OFF", command=self.backlight_off).grid(row=19, column=1)
 
-        self.tracking_data_label = Label(self, text='\nTracking data').grid(row=19, columnspan=2)
+        self.tracking_data_label = Label(self, text='\nTracking data').grid(row=20, columnspan=2)
         self.tracking_data_str = StringVar()
         self.tracking_data_str.set('Tracking data is disabled')
-        self.tracking_data_status_label = Label(self, textvariable=self.tracking_data_str).grid(row=20, columnspan=2)
+        self.tracking_data_status_label = Label(self, textvariable=self.tracking_data_str).grid(row=21, columnspan=2)
         self.tracking_data_on = Button(self, text='Start tracking', command=self.start_tracking_data_in_thread)
-        self.tracking_data_on.grid(row=21, column=0)
+        self.tracking_data_on.grid(row=22, column=0)
         self.tracking_data_off = Button(self, text='Stop tracking', command=self.stop_tracking_data)
-        self.tracking_data_off.grid(row=21, column=1)
+        self.tracking_data_off.grid(row=22, column=1)
 
         '''
         Set commands, boolean things and something to store data
